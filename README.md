@@ -113,7 +113,9 @@ One of the golden rules of op amp analysis says this: no current flows into eith
   </tr>
 </table>
 
-<img src="meme.png" alt="Italian Trulli" align="center">
+<p align="center">
+  <img src="meme.png" alt="Italian Trulli" align="center">
+</p>
 
 ## USING LM324 and ArduinoDUE!
 
