@@ -161,9 +161,9 @@ voltage that the machine could record would be upto 0.03125. ADS1115 being 16 bi
 uses the reference voltage 1.025 volts and out of 16 bits, one bit is a signed bit, whereas
 the remaining 15 bits are for resolution purpose.
 
-## Results
+## Results...
   
-![result](https://github.com/1998ramanpreet/Read-Out-Circuit-for-Biosensors/blob/main/result.JPG?raw=true) 
+<img src="result.JPG" alt="connectionsonpcb" align="center">
 
 
 
