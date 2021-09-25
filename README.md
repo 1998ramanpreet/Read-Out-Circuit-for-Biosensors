@@ -121,7 +121,11 @@ One of the golden rules of op amp analysis says this: no current flows into eith
 
 Here we use LM324 with the combination of Arduino Due, as the module offers 12 bit
 ADC. Lm324 as we know offers 100nA of Biasing current. In order to Calibrate our device,
-we need higher resolution so as to display more number of resistance and voltage values.
+we need higher resolution so as to display more number of resistance and voltage values.<br>
+Even though the Arduino Due with higher bit ADC was used, we were unable to achieve
+better accurate results as compared to the LM358, this was partially due to the heating losses in the Arduino’s microcontroller itself. The results thus obtained deviated slightly more than the actual values of voltage and electrode resistance.
+Hence, in order to achieve greater amount of accuracy and resolution in the read out circuit we
+opted for external Analog to digital converter.
 
   <table>
   <tr>
@@ -139,11 +143,6 @@ we need higher resolution so as to display more number of resistance and voltage
     <td>Vchange = 0.268mV </td>
   </tr>
 </table>
-
-Even though the Arduino Due with higher bit ADC was used, we were unable to achieve
-better accurate results as compared to the LM358, this was partially due to the heating losses in the Arduino’s microcontroller itself. The results thus obtained deviated slightly more than the actual values of voltage and electrode resistance.
-Hence, in order to achieve greater amount of accuracy and resolution in the read out circuit we
-opted for external Analog to digital converter.
 
 ## STRECHING OUR BOUNDARIES: USING LM358 AND ADS1115
 
