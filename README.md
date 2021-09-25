@@ -67,14 +67,6 @@ increase and decrease and that will decide the potential at an output.
   </tr>
 </table>
 
-We observed that the values of voltage being displayed on the screen (LCD) has a resolution of
-approximately 4.88mV.
-PAGE 16For the value of reference voltage 5mV, the values of resistances, being displayed on the LCD
-are close to the applied electrode to a finite range of 1000 ohms after which the deviation is quite
-large. Whereas, as we move in the value of reference voltage= 1.1mV the values are obtained
-till 2500 ohms, with a slight deviation from the actual values of voltages and resistances.
-
-
 ## MOVING TOWARDS BETTER RESOLUTION: LM324
 
 In order to increase the accuracy of the instrument we use LM324, which is a better amplifier in terms of
