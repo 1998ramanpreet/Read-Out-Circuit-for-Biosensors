@@ -26,7 +26,7 @@ Well….In reality it looks like this……
 
 ![breadBoardCircuit](https://github.com/1998ramanpreet/Read-Out-Circuit-for-Biosensors/blob/main/breadBoardCircuit.jpg?raw=true)
 
-## Hardware components:<br>(the stuff we used in our circuit)
+## Hardware components: (the stuff we used in our circuit)
  <ul>
   <li>ATMEGA 328</li>
   <li>Operational amplifiers: LM358/LM324/TSU112/TSU111</li>
