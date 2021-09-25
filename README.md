@@ -162,9 +162,9 @@ uses the reference voltage 1.025 volts and out of 16 bits, one bit is a signed b
 the remaining 15 bits are for resolution purpose.
 
 ## Results...
-  
-<img src="result.JPG" alt="connectionsonpcb" align="center">
-
+<center>
+<img src="result.JPG" alt="connectionsonpcb">
+</center>
 
 
   
