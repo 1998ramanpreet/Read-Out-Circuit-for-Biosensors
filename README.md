@@ -38,7 +38,7 @@ Well….In reality it looks like this……
 
 ## USING LM358 and Arduino UNO
 
-<img src="connectionsonpcb1.jpeg" alt="connectionsonpcb" width=25% height=75% align="right">
+<img src="connectionsonpcb1.jpeg" alt="connectionsonpcb" width=25% height=80% align="right">
 
 Lm358 is an operational amplifier (op-amp) and in this circuit we are using it as a current amplifier. Lm358
 has two independent comparators inside it, but here we are using comparator with inputs at PIN 2(Inverting)
@@ -89,14 +89,7 @@ and more accurate the instrument is.
 One of the golden rules of op amp analysis says this: no current flows into either input terminal. This concept is key for analyzing an amplifier's signal gain. However, in reality, a small current flows into both inputs to bias the input transistors. Unfortunately, this bias current gets converted into a voltage by the circuit's local resistors and amplified right along with the signal. The result is an output error in your circuit. What can you do about it? A clever choice of resistor values can help you cancel most of the output error. The remaining error can be adjusted to zero if necessary.</li>
  </ul>
  
- ## RESOLUTION : WHY DO WE EVEN CARE??
- <ul>
- <li>Embedded into the Arduino microprocessor is an Analog to Digital Converter (ADC).   This ADC takes an analog signal, measures it, and converts it to digital (or binary).  The number of bits used to the digitally communicate the binary value represents the resolution.</li>
- <li>In fact,  ADCs are often described by their resolution.   When we hear that a device has a 10 bit Analog to Digital Converter,  we know that it uses ten digital bits to describe an analog value.  Similarly, a 24 bit Analog to Digital converter will use 24 pieces of information to tell us what the analog value is.</li>
- <li>Generally speaking, when a device has higher resolution, it provides more detail, information, or definition than the device that has lower resolution.</li>
- </ul>
- 
-  <table>
+ <table>
   <tr>
     <th>Bias Current of Op-amp: 45nA</th>
     <th colspan="2">Resolution of ADC: 10 bits   </th>
@@ -112,7 +105,14 @@ One of the golden rules of op amp analysis says this: no current flows into eith
     <td>Vchange = 1.074mV </td>
   </tr>
 </table>
-
+ 
+ ## RESOLUTION : WHY DO WE EVEN CARE??
+ <ul>
+ <li>Embedded into the Arduino microprocessor is an Analog to Digital Converter (ADC).   This ADC takes an analog signal, measures it, and converts it to digital (or binary).  The number of bits used to the digitally communicate the binary value represents the resolution.</li>
+ <li>In fact,  ADCs are often described by their resolution.   When we hear that a device has a 10 bit Analog to Digital Converter,  we know that it uses ten digital bits to describe an analog value.  Similarly, a 24 bit Analog to Digital converter will use 24 pieces of information to tell us what the analog value is.</li>
+ <li>Generally speaking, when a device has higher resolution, it provides more detail, information, or definition than the device that has lower resolution.</li>
+ </ul>
+ 
 <p align="center">
   <img src="meme.png" alt="Italian Trulli" align="center">
 </p>
