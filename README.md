@@ -58,6 +58,8 @@ Well….In reality it looks like this……
 </table>
 
 
+
+
 ## MOVING TOWARDS BETTER RESOLUTION: LM324
 <ul>
   <li>WHY LM324 is better than LM358?<br>
