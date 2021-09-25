@@ -72,7 +72,9 @@ One of the golden rules of op amp analysis says this: no current flows into eith
  <li>In fact,  ADCs are often described by their resolution.   When we hear that a device has a 10 bit Analog to Digital Converter,  we know that it uses ten digital bits to describe an analog value.  Similarly, a 24 bit Analog to Digital converter will use 24 pieces of information to tell us what the analog value is.</li>
  <li>Generally speaking, when a device has higher resolution, it provides more detail, information, or definition than the device that has lower resolution.</li>
  </ul>
- ## USING LM324 and ArduinoUNO!
+ 
+## USING LM324 and ArduinoUNO!
+
 <img src="meme.png" alt="Italian Trulli">
 
 ## STRECHING OUR BOUNDARIES: USING ADS115 AND TSU111
