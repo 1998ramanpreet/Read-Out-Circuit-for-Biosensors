@@ -69,8 +69,6 @@ increase and decrease and that will decide the potential at an output.
 
 ## MOVING TOWARDS BETTER RESOLUTION: USING LM324 and ArduinoUNO!
 
-<img src="lm324uno.jpg" alt="lm324uno" width=25% height=50% align="right" style="transform:rotate(90deg);">
-
 In order to increase the accuracy of the instrument we use LM324, which is a better amplifier in terms of
 biasing current. Lm324 has biasing current of 45nA, which is much less than that of 100nA of LM358. In
 order to understand the relevance of using different IC, we first need to understand the importance of Biasing
@@ -121,7 +119,7 @@ One of the golden rules of op amp analysis says this: no current flows into eith
 
 ## USING LM324 and ArduinoDUE!
 
-<img src="lm324due.jpg" alt="lm324due" width=50% height=50% align="right">
+<img src="lm324due.jpg" alt="lm324due" width=45% height=45% align="right">
 
 Here we use LM324 with the combination of Arduino Due, as the module offers 12 bit
 ADC. Lm324 as we know offers 100nA of Biasing current. In order to Calibrate our device,
@@ -155,7 +153,7 @@ The ADS1115 is an external digital analog converter (ADC) that we can connect to
 
 ## LETS GO ONE STEP FURTHER: USING TSU112 AND ADS1115
 
-<img src="tsu.jpeg" alt="tsu" width=50% height=50% align="right">
+<img src="tsu.jpeg" alt="tsu" width=45% height=45% align="right">
 
 Why TSU112?<br>
 TSU111, TSU112 and the TSU114 are operational amplifiers (op-amp) which offer an ultra low-power consumption per channel of 900 nA typical and 1.2 μA maximum when supplied by 3.3 V. Combined with a supply voltage range of 1.5 V to 5.5 V. these features allow the TSU11x to be efficiently supplied by a coin type Lithium battery or a regulated voltage in low-power applications. 
