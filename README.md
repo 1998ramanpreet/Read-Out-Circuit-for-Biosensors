@@ -38,6 +38,8 @@ Well….In reality it looks like this……
 
 ## USING LM358 and Arduino UNO
 
+<img src="connectionsonpcb1.jpeg" alt="connectionsonpcb" width=25% height=25% align="right">
+
 Lm358 is an operational amplifier (op-amp) and in this circuit we are using it as a current amplifier. Lm358
 has two independent comparators inside it, but here we are using comparator with inputs at PIN 2(Inverting)
 and PIN3 (non inverting). Here we have a voltage divider circuit that gives 500mv supply to the non inverting
@@ -47,8 +49,6 @@ For an ideal op-amp there is a rule that the potential at both the inputs will b
 the feedback (the concept of virtual ground). If at non inverting input there is some potential of 500mV then
 the same will appear at the inverting input and the current through the feedback resistor will accordingly
 increase and decrease and that will decide the potential at an output.
-
-<img src="connectionsonpcb1.jpeg" alt="connectionsonpcb" width=25% height=25% align="right">
 
   <table>
   <tr>
