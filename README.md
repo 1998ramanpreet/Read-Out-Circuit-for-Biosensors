@@ -44,17 +44,17 @@ Well….In reality it looks like this……
   </tr>
   <tr>
     <td>Maximum resistance = 5M&ohm; </td>
-    <td>Reference Voltage = 5V </td>
-    <td>Reference Voltage = 1.1V </td>
+    <td>Vref = 5V </td>
+    <td>Vref = 1.1V </td>
   </tr>
   <tr>
     <td> </td>
-    <td>Change in Voltage = 4.88mV </td>
-    <td>Change in Voltage = 1.074mV </td>
+    <td>Vchange = 4.88mV </td>
+    <td>Vchange = 1.074mV </td>
   </tr>
 </table>
 
-<img src="connectionsonpcb1.jpeg" alt="connectionsonpcb" width=25% height=25% alig="right">
+<img src="connectionsonpcb1.jpeg" alt="connectionsonpcb" width=25% height=25% align="right">
 
 ## MOVING TOWARDS BETTER RESOLUTION: LM324
 <ul>
