@@ -38,6 +38,16 @@ Well….In reality it looks like this……
 
 ## USING LM358 and Arduino UNO
 
+Lm358 is an operational amplifier (op-amp) and in this circuit we are using it as a current amplifier. Lm358
+has two independent comparators inside it, but here we are using comparator with inputs at PIN 2(Inverting)
+and PIN3 (non inverting). Here we have a voltage divider circuit that gives 500mv supply to the non inverting
+input of the op-amp. The 100k resistor provides a feedback path and determines the gain. Also the output
+(w.r.t. ground) is taken through the PIN1.
+For an ideal op-amp there is a rule that the potential at both the inputs will be the same which is done through
+the feedback (the concept of virtual ground). If at non inverting input there is some potential of 500mV then
+the same will appear at the inverting input and the current through the feedback resistor will accordingly
+increase and decrease and that will decide the potential at an output.
+
 <img src="connectionsonpcb1.jpeg" alt="connectionsonpcb" width=25% height=25% align="right">
 
   <table>
@@ -57,10 +67,29 @@ Well….In reality it looks like this……
   </tr>
 </table>
 
-
+We observed that the values of voltage being displayed on the screen (LCD) has a resolution of
+approximately 4.88mV.
+PAGE 16For the value of reference voltage 5mV, the values of resistances, being displayed on the LCD
+are close to the applied electrode to a finite range of 1000 ohms after which the deviation is quite
+large. Whereas, as we move in the value of reference voltage= 1.1mV the values are obtained
+till 2500 ohms, with a slight deviation from the actual values of voltages and resistances.
 
 
 ## MOVING TOWARDS BETTER RESOLUTION: LM324
+
+In order to increase the accuracy of the instrument we use LM324, which is a better amplifier in terms of
+biasing current. Lm324 has biasing current of 45nA, which is much less than that of 100nA of LM358. In
+order to understand the relevance of using different IC, we first need to understand the importance of Biasing
+Current in an op-amp.
+Importance of Biasing Current:
+One of the golden rules of op amp analysis says this: no current flows into either input terminal. This concept
+is key for analyzing an amplifier's signal gain. However, in reality, a small current flows into both inputs to
+bias the input transistors. Unfortunately, this bias current gets converted into a voltage by the circuit's local
+resistors and amplified right along with the signal. The result is an output error in your circuit. What can we
+do about it? A clever choice of resistor values can help us cancel most of the output error. The remaining
+error can be adjusted to zero if necessary. Hence less is the biasing current, less is the error in readout circuit,
+and more accurate the instrument is.
+
 <ul>
   <li>WHY LM324 is better than LM358?<br>
   Lm324 has the biasing current of 45nA whereas the LM358 has the biasing current of 100nA.</li>
@@ -94,7 +123,37 @@ One of the golden rules of op amp analysis says this: no current flows into eith
   </tr>
 </table>
 
-<img src="meme.png" alt="Italian Trulli">
+<img src="meme.png" alt="Italian Trulli" align="center">
+
+## USING LM324 and ArduinoDUE!
+
+Here we use LM324 with the combination of Arduino Due, as the module offers 12 bit
+ADC. Lm324 as we know offers 100nA of Biasing current. In order to Calibrate our device,
+we need higher resolution so as to display more number of resistance and voltage values.
+
+  <table>
+  <tr>
+    <th>Bias Current of Op-amp: 45nA</th>
+    <th colspan="2">Resolution of ADC: 12 bits   </th>
+  </tr>
+  <tr>
+    <td>Maximum resistance = 11.11M&ohm; </td>
+    <td>Vref = 5V </td>
+    <td>Vref = 1.1V </td>
+  </tr>
+  <tr>
+    <td> </td>
+    <td>Vchange = 1.22mV </td>
+    <td>Vchange = 0.268mV </td>
+  </tr>
+</table>
+
+Even though the Arduino Due with higher bit ADC was used, we were unable to achieve
+better accurate results as compared to the LM358, this was partially due to the heating
+PAGE 32losses in the Arduino’s microcontroller itself. The results thus obtained deviated slightly
+more than the actual values of voltage and electrode resistance.
+Hence, in order to achieve greater amount of accuracy and resolution in the read out circuit we
+opted for external Analog to digital converter.
 
 ## STRECHING OUR BOUNDARIES: USING ADS115 AND TSU111
 <ul>
