@@ -38,7 +38,7 @@ Well….In reality it looks like this……
 
 ## USING LM358 and Arduino UNO
 
-<img src="connectionsonpcb1.jpeg" alt="connectionsonpcb" width=25% height=50% align="right">
+<img src="connectionsonpcb1.jpeg" alt="connectionsonpcb" width=25% height=70% align="right">
 
 Lm358 is an operational amplifier (op-amp) and in this circuit we are using it as a current amplifier. Lm358
 has two independent comparators inside it, but here we are using comparator with inputs at PIN 2(Inverting)
@@ -69,7 +69,7 @@ increase and decrease and that will decide the potential at an output.
 
 ## MOVING TOWARDS BETTER RESOLUTION: USING LM324 and ArduinoUNO!
 
-<img src="lm324uno.jpg" alt="lm324uno" width=25% height=50% align="right">
+<img src="lm324uno.jpg" alt="lm324uno" width=25% height=50% align="right" rotate="90">
 
 In order to increase the accuracy of the instrument we use LM324, which is a better amplifier in terms of
 biasing current. Lm324 has biasing current of 45nA, which is much less than that of 100nA of LM358. In
@@ -155,7 +155,7 @@ The ADS1115 is an external digital analog converter (ADC) that we can connect to
 
 ## LETS GO ONE STEP FURTHER: USING TSU112 AND ADS1115
 
-<img src="tsu.jpg" alt="tsu" width=25% height=50% align="right">
+<img src="tsu.jpeg" alt="tsu" width=25% height=50% align="right">
 
 Why TSU112?<br>
 TSU111, TSU112 and the TSU114 are operational amplifiers (op-amp) which offer an ultra low-power consumption per channel of 900 nA typical and 1.2 μA maximum when supplied by 3.3 V. Combined with a supply voltage range of 1.5 V to 5.5 V. these features allow the TSU11x to be efficiently supplied by a coin type Lithium battery or a regulated voltage in low-power applications. 
