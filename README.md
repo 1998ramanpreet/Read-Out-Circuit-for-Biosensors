@@ -75,6 +75,23 @@ One of the golden rules of op amp analysis says this: no current flows into eith
  
 ## USING LM324 and ArduinoUNO!
 
+  <table>
+  <tr>
+    <th>Bias Current of Op-amp: 45nA</th>
+    <th colspan="2">Resolution of ADC: 10 bits   </th>
+  </tr>
+  <tr>
+    <td>Maximum resistance = 11.11M&ohm; </td>
+    <td>Vref = 5V </td>
+    <td>Vref = 1.1V </td>
+  </tr>
+  <tr>
+    <td> </td>
+    <td>Vchange = 4.88mV </td>
+    <td>Vchange = 1.074mV </td>
+  </tr>
+</table>
+
 <img src="meme.png" alt="Italian Trulli">
 
 ## STRECHING OUR BOUNDARIES: USING ADS115 AND TSU111
