@@ -54,7 +54,7 @@ Well….In reality it looks like this……
   </tr>
 </table>
 
-<img src="connectionsonpcb.jpeg" alt="connectionsonpcb" width=25% height=25%>
+<img src="connectionsonpcb1.jpeg" alt="connectionsonpcb" width=25% height=25%>
 
 ## MOVING TOWARDS BETTER RESOLUTION: LM324
 <ul>
