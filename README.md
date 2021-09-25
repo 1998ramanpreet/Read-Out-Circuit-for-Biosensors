@@ -67,7 +67,7 @@ increase and decrease and that will decide the potential at an output.
   </tr>
 </table>
 
-## MOVING TOWARDS BETTER RESOLUTION: LM324
+## MOVING TOWARDS BETTER RESOLUTION: USING LM324 and ArduinoUNO!
 
 In order to increase the accuracy of the instrument we use LM324, which is a better amplifier in terms of
 biasing current. Lm324 has biasing current of 45nA, which is much less than that of 100nA of LM358. In
@@ -96,8 +96,6 @@ One of the golden rules of op amp analysis says this: no current flows into eith
  <li>Generally speaking, when a device has higher resolution, it provides more detail, information, or definition than the device that has lower resolution.</li>
  </ul>
  
-## USING LM324 and ArduinoUNO!
-
   <table>
   <tr>
     <th>Bias Current of Op-amp: 45nA</th>
@@ -141,18 +139,27 @@ we need higher resolution so as to display more number of resistance and voltage
 </table>
 
 Even though the Arduino Due with higher bit ADC was used, we were unable to achieve
-better accurate results as compared to the LM358, this was partially due to the heating
-PAGE 32losses in the Arduino’s microcontroller itself. The results thus obtained deviated slightly
-more than the actual values of voltage and electrode resistance.
+better accurate results as compared to the LM358, this was partially due to the heating losses in the Arduino’s microcontroller itself. The results thus obtained deviated slightly more than the actual values of voltage and electrode resistance.
 Hence, in order to achieve greater amount of accuracy and resolution in the read out circuit we
 opted for external Analog to digital converter.
 
-## STRECHING OUR BOUNDARIES: USING ADS115 AND TSU111
-<ul>
- <li>Why ADS1115?<br>ADS1115 is a 16 bit analog to digital convertor. Earlier we were using 10 bit ADC in Arduino Uno or 12 bit ADC in Arduino Due. In order to display the exact same value of the voltage and resistances, we need to increase the resolution of our ADC’s. Due to unavailability of higher bit ADC’s in Arduino modules, we went for an external ADC which could further be interfaced with Arduino.<br>
-The ADS1115 is an external digital analog converter (ADC) that we can connect to a processor like Arduino to measure analog signals. Arduino has internal ADCs that we use when we use the Arduino analog inputs. On the Arduino Uno, Mini and Nano models, we have 6 ADC of 10 bits. The ADS1115 provides 4 16-bit ADCs, 15 for the measurement and one last for the sign. The ADS1115 is connected by I2C, so it is easy to read. It has 4 addresses, which is chosen by connecting the ADDRESS pin. The interest of using an ADC such as the ADS1115 is to obtain greater precision, in addition to freeing the processor from this burden. In addition, in certain configurations, it is possible to measure negative voltages.</li>
- <li>Why TSU111?<br>
+## STRECHING OUR BOUNDARIES: USING LM358 AND ADS1115
+
+Why ADS1115?<br>ADS1115 is a 16 bit analog to digital convertor. Earlier we were using 10 bit ADC in Arduino Uno or 12 bit ADC in Arduino Due. In order to display the exact same value of the voltage and resistances, we need to increase the resolution of our ADC’s. Due to unavailability of higher bit ADC’s in Arduino modules, we went for an external ADC which could further be interfaced with Arduino.<br>
+The ADS1115 is an external digital analog converter (ADC) that we can connect to a processor like Arduino to measure analog signals. Arduino has internal ADCs that we use when we use the Arduino analog inputs. On the Arduino Uno, Mini and Nano models, we have 6 ADC of 10 bits. The ADS1115 provides 4 16-bit ADCs, 15 for the measurement and one last for the sign. The ADS1115 is connected by I2C, so it is easy to read. It has 4 addresses, which is chosen by connecting the ADDRESS pin. The interest of using an ADC such as the ADS1115 is to obtain greater precision, in addition to freeing the processor from this burden. In addition, in certain configurations, it is possible to measure negative voltage. Using ADS1115 we were able to get a resolution of 0.1875 mV.
+
+## LETS GO ONE STEP FURTHER: USING TSU112 AND ADS1115
+
+Why TSU112?<br>
 TSU111, TSU112 and the TSU114 are operational amplifiers (op-amp) which offer an ultra low-power consumption per channel of 900 nA typical and 1.2 μA maximum when supplied by 3.3 V. Combined with a supply voltage range of 1.5 V to 5.5 V. these features allow the TSU11x to be efficiently supplied by a coin type Lithium battery or a regulated voltage in low-power applications. 
+
+Since we required a higher bit ADC for more resolution and an op-amp having lower
+biasing current to improve the accuracy of the read out circuit, we moved towards an
+external ADC and TSU112 having biasing current of about 10pA. Using the above
+combination we could achieve the resistance values of upto 10GΩ and the change in
+voltage that the machine could record would be upto 0.03125. ADS1115 being 16 bit ADC
+uses the reference voltage 1.025 volts and out of 16 bits, one bit is a signed bit, whereas
+the remaining 15 bits are for resolution purpose.
 
 ## Results
   
