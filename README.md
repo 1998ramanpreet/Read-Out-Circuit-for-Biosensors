@@ -171,6 +171,11 @@ the remaining 15 bits are for resolution purpose.
  <img src="result.JPG" alt="connectionsonpcb">
 </p>
 
+## Team Members
+- [Akshansh Singh](https://github.com/AkshanshSingh)
+- [Shikha Singhal](https://github.com/shikhasinghal2075)
+- [Trishna Aryal](https://github.com/trishnaaryal)
+
 
 
 
